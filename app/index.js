@@ -25,17 +25,29 @@ var ComposeCssGenerator = yeoman.generators.Base.extend({
     // replace it with a short and sweet description of your generator
     this.log(chalk.magenta('You\'re using the fantastic ComposeCss generator.'));
 
+    var formats = ['bootstrap', 'pure', 'foundation', 'topcoat'];
     var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
+      type: 'list',
+      name: 'format',
+      message: 'Which framework would you like to use?',
+      choices: formats
     }];
 
     this.prompt(prompts, function (props) {
-      this.someOption = props.someOption;
+      this.format = props.format;
+
+      if ( this.format === 'bootstrap' ) {
+        this.composeWith('bootstrap');
+      } else if ( this.format === 'foundation' ) {
+        this.composeWith('zurb-foundation');
+      } else if ( this.format === 'topcoat' ) {
+        this.composeWith('topcoat-touch');
+      } else if (this.format === 'pure') {
+        this.composeWith('pure');
+      }
 
       done();
+      
     }.bind(this));
   },
 

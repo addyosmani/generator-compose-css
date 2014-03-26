@@ -23,8 +23,13 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "yeoman-generator": "~0.16.0",
-    "chalk": "~0.4.0"
+    "yeoman-generator": "~0.17.0-pre.2",
+    "chalk": "~0.4.0",
+    "generator-zurb-foundation": "*",
+    "generator-bootstrap": "*",
+    "generator-mocha": "*",
+    "generator-topcoat-touch": "*",
+    "generator-pure": "*"
   },
   "devDependencies": {
     "mocha": "*"

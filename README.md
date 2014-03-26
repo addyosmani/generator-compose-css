@@ -2,6 +2,14 @@
 
 > [Yeoman](http://yeoman.io) generator
 
+## Scratch notes
+
+* What generators could this call? 
+* https://github.com/yeoman/generator-bootstrap
+* https://github.com/sindresorhus/generator-pure
+* https://www.npmjs.org/package/generator-zurb-foundation
+* https://www.npmjs.org/package/generator-topcoat-touch
+
 
 ## Getting Started
 
